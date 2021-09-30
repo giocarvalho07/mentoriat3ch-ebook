@@ -13,8 +13,6 @@ import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.Size;
 
 @Entity
-@AllArgsConstructor
-@NoArgsConstructor
 @Data
 public class CarreiraT3ch {
 
