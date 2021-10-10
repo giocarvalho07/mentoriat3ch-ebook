@@ -14,19 +14,19 @@ public class CarreiraT3chController {
     @Autowired
     CarreiraT3chService carreiraT3chService;
 
-    @GetMapping("/mT3ch-ebook")
+    @GetMapping("/")
     public String index() {
         return "index";
     }
 
-    @PostMapping("/mT3ch-ebook")
+    @PostMapping("/")
     public String cadastrarEbook(CarreiraT3ch carreiraT3ch) {
         carreiraT3chService.criarLead(carreiraT3ch);
         return "pages/ebook";
     }
 
 
-    @GetMapping("/mT3ch-receber-ebook")
+    @GetMapping("/mT3ch-ebook")
     public ModelAndView receberEbook() {
         ModelAndView model = new ModelAndView("pages/ebook");
         Iterable<CarreiraT3ch> carreiraT3ches = carreiraT3chService.exibirPageEbook();
